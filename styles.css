@@ -40,6 +40,7 @@ ul, li, a{
     color: var(--acento);
     font-weight: 600;
     font-size: 1.4em;
+    width: calc(100% / 3 );
 }
 .fa-solid.fa-list, .fa-solid.fa-circle-user, .fa-solid.fa-cart-shopping{
     font-size: 1.5em;
@@ -110,10 +111,11 @@ h2{
     display: flex;
     flex-direction: column;
     animation-duration: 3ms;
-    margin-left: -2.7em;
+
 }
 #mueb-desp{
-    margin-left: 0;
+    margin: 0;
+    
 }
 p{
     color: var(--texto);
@@ -124,32 +126,43 @@ p{
     margin-top: 5%;
     border-radius: 5px;
 }
-#filtros:hover{
+.filtros nav ul li:hover > ul.lista{
+    display: block;
     width: calc(100% / 2 - 30px);
     height: max-content;
-    display: flex;
-    justify-content: center;
+    color: #400101;
+    margin: auto;
     background-color: #F2EEEB;
 }
 .list-text{
     color: #400101;
 }
-#filtros2:hover{
-    width: calc(100% / 2 - 30px);
-    height: max-content;
-    display: flex;
-    justify-content: center;
-    background-color: #F2EEEB;
+.filtros nav ul li{
+    color: #400101;
+}
+.fa-solid.fa-circle-user{
+    display: none;
+}
+#desp{
+    width: calc(100% / 3 );
+}
+/* .bttn{
+    width: calc(100% / 3 );
+} */
+h2.texto{
+    display: none;
 }
 @media screen and (min-width: 670px){
     body{
         min-width: 670px;
+        width: 100%;
     }
     #desp{
         display: none;
     }
     #compu{
         display: block;
+        width: calc(100% / 3 - 15px);
     }
     #menu-compu{
         color: #400101;
@@ -157,13 +170,14 @@ p{
         font-size: 1.2em;
     }
     #ul-compu{
-        width: calc(100% / 3 - 35px);
-        margin-left: -9%;
+        width: calc(100% / 3);
+        margin: auto;
+
     }
     .texto-header{
         width: 25%;
     }
-    .texto{
+    h2.texto{
         display: block;
         color: #400101;
         font-size: 3em;
@@ -186,7 +200,7 @@ p{
         flex-direction: column;
     }
     #foto-1{
-        width: 90vh;
+        width: max-content;
         height: 100%;
         margin-top: 10em;
         margin-left: 3%;
@@ -195,26 +209,38 @@ p{
     .filtros{
         width: 25%;
         height: 3.5vh;
-        align-self: center;
-        display: flex;
-        justify-content: center;
+        margin: auto;
     }
     .foto-prod{
         width: 95%;
     }
-    #filtros:hover{
+    .filtros nav ul li:hover > ul.lista{
+        display: block;
         width: 25%;
         height: max-content;
+        color: #400101;
+        margin: auto;
         display: flex;
         justify-content: center;
         background-color: #F2EEEB;
     }
-    #filtros2:hover{
-        width: 25%;
-        height: max-content;
+
+    .bttns{
         display: flex;
-        justify-content: center;
-        background-color: #F2EEEB;
-}
+        justify-content: space-between;
+        
+        
+    }
+    #top-txt{
+        width: calc(100% / 3 - 15px);
+    }
+
+    .fa-solid.fa-cart-shopping{
+        margin-right: 15px;
+    }
+    .fa-solid.fa-circle-user{
+        margin-left: 15px;
+        display: block;
+    }
 
 }
